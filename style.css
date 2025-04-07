@@ -1,0 +1,246 @@
+/* Global Styles */
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;S
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #040406;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+  background-color: #6069dd;
+  color: white;
+  padding: 20px 0;
+}
+
+header .logo img {
+  width: 50px;
+  margin-left: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect on navigation links */
+nav ul li a:hover {
+  background-color: #6b78ec;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.hero-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* About Section */
+.about {
+  padding: 50px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  background-color: #5347d5;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #bca4a4;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact h1 {
+  margin-bottom: 20px;
+}
+
+.contact ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact ul li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* Mobile Layout */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer ul li {
+    margin: 5px 0;
+  }
+}
+
+/* Hamburger Menu Styles for Mobile */
+@media (max-width: 480px) {
+  .hamburger {
+    display: block;
+    background-color: #000000;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 30px;
+    height: 5px;
+    background-color: rgb(131, 159, 220);
+    margin: 6px 0;
+    transition: transform 0.3s ease;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #7f9bf8;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+
+  nav ul li a {
+    color: rgb(223, 186, 186);
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+  }
+
+  nav ul li a:hover {
+    background-color: #7f7aec;
+  }
+}
